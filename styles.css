@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('startbg.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    font-family: serif;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.difficulty-options {
+    margin-bottom: 20px;
+}
+
+.difficulty-option {
+    display: block;
+    font-size: 24px;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.difficulty-option:hover {
+    background-color: darkgray;
+}
+
+.start-button {
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: darkgray;
+}
