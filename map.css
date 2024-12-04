@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #cce7ff; /* Light blue for the map background */
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    border: 2px solid #333;
+    background: #cce7ff; /* Optional map background */
+}
+
+#character {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.building {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background: yellow;
+    text-align: center;
+    line-height: 80px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.road {
+    position: absolute;
+    background: gray;
+    z-index: 1;
+}
+
+.road.horizontal {
+    height: 60px;
+}
+
+.road.vertical {
+    width: 60px;
+}

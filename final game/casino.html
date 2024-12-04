@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="status-bar">
+            <div>Health: <span id="health">11/21</span></div>
+            <div>Money: $<span id="money">100</span></div>
+            <div>Day: <span id="day">1</span></div>
+        </div>
+        <div class="menu-box">
+            <h2>Welcome to the Red Deer Casino! How can we empty your pockets?</h2>
+            <div class="menu-options">
+                <input type="number" id="betAmount" placeholder="Enter Bet Amount" min="1">
+                <button onclick="playSlots()">Play Slots</button>
+                <button onclick="playBlackjack()">Play Blackjack</button>
+                <button onclick="playRoulette()">Play Roulette</button>
+                <button onclick="leaveCasino()">Leave</button>
+            </div>
+            <div id="slots-result"></div>
+            <div id="blackjack-result"></div>
+            <div id="roulette-result"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

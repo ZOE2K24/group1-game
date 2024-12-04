@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Map</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Character -->
+        <div id="character"></div>
+        
+        <!-- Buildings -->
+        <div class="building" id="bank" data-link="bank.html" style="top: 50px; left: 100px;">Bank</div>
+        <div class="building" id="casino" data-link="final game/casino.html" style="top: 50px; left: 400px;">Casino</div>
+        <div class="building" id="home" data-link="home.html" style="top: 300px; left: 100px;">Home</div>
+        <div class="building" id="redsticks" data-link="redsticks.html" style="top: 300px; left: 400px;">RedSticks</div>
+        <div class="building" id="rdp" data-link="rdp.html" style="top: 50px; left: 700px;">RDP (University)</div>
+        <div class="building" id="convenience" data-link="convenience.html" style="top: 300px; left: 700px;">Convenience</div>
+        
+        <!-- Roads -->
+        <div class="road horizontal" style="top: 200px; left: 0; width: 100%;"></div>
+        <div class="road vertical" style="top: 0; left: 300px; height: 100%;"></div>
+    </div>
+    <script src="map.js"></script>
+</body>
+</html>
