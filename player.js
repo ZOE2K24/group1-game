@@ -48,7 +48,7 @@ function done() {
       `Character Created:\nName: ${name}\nCharm: ${attributes.charm}\nStrength: ${attributes.strength}\nIntelligence: ${attributes.intelligence}\nHP: ${initialHP}\nMoney: ${initialMoney}`
   );
 
-  window.location.href = "game.html";
+  window.location.href = "map.html";
 }
 
 function updateUI() {

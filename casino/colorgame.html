@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="colorgame.css">
+</head>
+<body>
+    <!-- Stat Bar -->
+    <div id="stats-bar">
+        <div id="money">Money: $100</div>
+        <div id="actions-left">Actions Left: 5</div>
+        <div id="day">Day: 1</div>
+    </div>
+
+    <!-- Color Game Container -->
+    <div id="color-game-container">
+        <h1>Color Game</h1>
+        <div id="dice-container">
+            <div class="dice" id="dice1"></div>
+            <div class="dice" id="dice2"></div>
+            <div class="dice" id="dice3"></div>
+        </div>
+        <p id="instructions">Tap colors to bet, then roll the dice!</p>
+
+        <!-- Betting Options -->
+        <div id="color-options">
+            <button class="color-button red" data-color="red"></button>
+            <button class="color-button green" data-color="green"></button>
+            <button class="color-button blue" data-color="blue"></button>
+            <button class="color-button yellow" data-color="yellow"></button>
+        </div>
+
+        <!-- Roll Button -->
+        <button id="roll">Roll</button>
+
+        <!-- Game Result -->
+        <div id="game-result"></div>
+
+        <!-- Leave Button -->
+        <button id="leave" class="leave">Leave</button>
+    </div>
+
+    <script src="colorgame.js"></script>
+    <script src="log.js"></script>
+
+</body>
+</html>

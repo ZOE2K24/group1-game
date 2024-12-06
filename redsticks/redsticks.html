@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to RedSticks</h1>
+    <button onclick="leaveBuilding()">Leave</button>
+    <script>
+    function leaveBuilding() {
+        // Move character to a safe position (e.g., away from the building)
+        localStorage.setItem("characterX", 300); // Safe X position
+        localStorage.setItem("characterY", 300); // Safe Y position
+
+        // Redirect back to the map
+        window.location.href = "../map.html";
+    }
+</script>
+
+</body>
+</html>

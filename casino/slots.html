@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slots Game</title>
+    <link rel="stylesheet" href="casino.css">
+</head>
+<body>
+    <!-- Stat Bar -->
+    <div id="stats-bar">
+        <div id="hp-bar">
+            <span>HP:</span>
+            <div class="hp-container">
+                <div class="hp-progress"></div>
+            </div>
+        </div>
+        <div id="money">Money: $0</div>
+        <div id="actions-left">Actions Left: 0</div>
+        <div id="day">Day: 0</div>
+    </div>
+
+    <!-- Slots Game Container -->
+    <div id="slots-container">
+        <div class="casino-box">
+            <h1>Slots Game</h1>
+            <div id="slots-machine">
+                <div class="slot" id="slot1">🍒</div>
+                <div class="slot" id="slot2">🍋</div>
+                <div class="slot" id="slot3">🍊</div>
+            </div>
+            <p>Each spin costs $10. Match all 3 symbols to win $50!</p>
+            <button id="spin" class="button">Spin</button>
+            <button id="leave" class="leave">Leave</button>
+        </div>
+    </div>
+
+    <script src="slots.js"></script>
+    <script src="stat-bar.js"></script> <!-- Shared stat-bar functionality -->
+</body>
+</html>

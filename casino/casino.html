@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino</title>
+    <link rel="stylesheet" href="casino.css">
+</head>
+<body>
+    <!-- Stat Bar -->
+    <div id="stats-bar">
+        <div id="money">Money: $100</div>
+        <div id="actions-left">Actions Left: 5</div>
+        <div id="day">Day: 1</div>
+    </div>
+
+    <!-- Casino Options -->
+    <div id="casino-container">
+        <div class="casino-box">
+            <h1>Welcome to the Red Deer Casino</h1>
+            <p>How can we empty your pockets?</p>
+            <button id="play-slots" class="button">Play Slots</button>
+            <button id="play-roulette" class="button">Play Roulette</button>
+            <button id="play-color-game" class="button">Play Color Game</button>
+            <button id="leave" class="leave">Leave</button>
+        </div>
+    </div>
+
+    <script>
+        // Button Event Listeners
+        document.getElementById("play-slots").addEventListener("click", () => {
+            window.location.href = "slots.html"; // Adjust path if needed
+        });
+
+        document.getElementById("play-roulette").addEventListener("click", () => {
+            window.location.href = "roulette.html"; // Adjust path if needed
+        });
+
+        document.getElementById("play-color-game").addEventListener("click", () => {
+            window.location.href = "colorgame.html"; // Adjust path if needed
+        });
+
+        document.getElementById("leave").addEventListener("click", () => {
+            window.location.href = "../map.html"; // Adjust path if needed
+        });
+
+        // Load stats into stat bar
+        function loadStats() {
+            const stats = {
+                money: parseInt(localStorage.getItem("money")) || 100,
+                actions: parseInt(localStorage.getItem("actions")) || 5,
+                day: parseInt(localStorage.getItem("day")) || 1,
+            };
+
+            document.getElementById("money").textContent = `Money: $${stats.money}`;
+            document.getElementById("actions-left").textContent = `Actions Left: ${stats.actions}`;
+            document.getElementById("day").textContent = `Day: ${stats.day}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", loadStats);
+    </script>
+
+<script src="../log.js"></script>
+
+</body>
+</html>

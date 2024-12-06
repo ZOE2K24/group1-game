@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Deer University</title>
+    <link rel="stylesheet" href="rdp.css">
+</head>
+<body>
+    <!-- Stat Bar -->
+    <div id="stats-bar">
+        <div id="hp-bar">
+            <span>HP:</span>
+            <div class="hp-container">
+                <div class="hp-progress"></div>
+            </div>
+        </div>
+        <div id="money">Money: $100</div>
+        <div id="actions-left">Actions Left: 5</div>
+        <div id="day">Day: 1</div>
+    </div>
+
+    <!-- RDP Container -->
+    <div id="rdp-container">
+        <div class="rdp-box">
+            <h1>Red Deer University</h1>
+            <button id="study" class="button">Study (+1 Intelligence)</button>
+            <button id="go-to-class" class="button">Go to Class - $20 (+2 Intelligence)</button>
+            <button id="go-to-gym" class="button">Go to the Gym (+1 Strength)</button>
+            <button id="leave" class="leave">Leave</button>
+        </div>
+    </div>
+
+    <script src="stat-bar.js"></script> <!-- Shared stat-bar functionality -->
+    <script src="rdp.js"></script>
+    <script src="log.js"></script>
+</body>
+</html>
