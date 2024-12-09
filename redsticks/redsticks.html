@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>RedSticks</title>
+    <link rel="stylesheet" href="redsticks.css">
 </head>
 <body>
-    <h1>Welcome to RedSticks</h1>
-    <button onclick="leaveBuilding()">Leave</button>
-    <script>
-    function leaveBuilding() {
-        // Move character to a safe position (e.g., away from the building)
-        localStorage.setItem("characterX", 300); // Safe X position
-        localStorage.setItem("characterY", 300); // Safe Y position
+    <!-- Stat Bar -->
+    <div id="stats-bar">
+        <div id="hp-bar">
+            <span>HP:</span>
+            <div class="hp-container">
+                <div class="hp-progress"></div>
+            </div>
+        </div>
+        <div id="money">Money: $100</div>
+        <div id="actions-left">Actions Left: 5</div>
+        <div id="day">Day: 1</div>
+    </div>
 
-        // Redirect back to the map
-        window.location.href = "../map.html";
-    }
-</script>
+    <!-- RedSticks Container -->
+    <div id="redsticks-container">
+        <div class="redsticks-box">
+            <h1>"Welcome to RedSticks, may I take your order?"</h1>
+            <button id="milkshake" class="button">Milkshake (+12 HP) - $8</button>
+            <button id="fries" class="button">Fries (+20 HP) - $12</button>
+            <button id="cheeseburger" class="button">Cheeseburger (+40 HP) - $25</button>
+            <button id="triple-burger" class="button">Triple Burger (+80 HP) - $50</button>
+            <button id="leave" class="leave">Leave</button>
+        </div>
+    </div>
 
+    <script src="redsticks.js"></script>
 </body>
 </html>

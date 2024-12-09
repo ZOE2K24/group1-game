@@ -1,53 +1,65 @@
 let attributes = {
-  charm: 9,
-  strength: 6,
-  intelligence: 1,
-  extraPts: 4,
+  charm: 0,
+  strength: 0,
+  intelligence: 0,
+  extraPts: 10, // Default pool of points for user allocation
 };
 
 function increase(attribute) {
   if (attributes.extraPts > 0 && attributes[attribute] < 10) {
-      attributes[attribute]++;
-      attributes.extraPts--;
-      updateUI();
+    attributes[attribute]++;
+    attributes.extraPts--;
+    updateUI();
   }
 }
 
 function decrease(attribute) {
   if (attributes[attribute] > 0) {
-      attributes[attribute]--;
-      attributes.extraPts++;
-      updateUI();
+    attributes[attribute]--;
+    attributes.extraPts++;
+    updateUI();
   }
 }
 
 function rollAgain() {
-  if (attributes.extraPts > 0) {
-      const roll = Math.floor(Math.random() * 3);
-      const keys = ["charm", "strength", "intelligence"];
-      const key = keys[roll];
+  // Reset all attributes and extra points
+  attributes.charm = 0;
+  attributes.strength = 0;
+  attributes.intelligence = 0;
+  attributes.extraPts = 10;
 
-      if (attributes[key] < 10) {
-          attributes[key]++;
-          attributes.extraPts--;
-      }
-      updateUI();
+  // Randomly distribute all points
+  while (attributes.extraPts > 0) {
+    const roll = Math.floor(Math.random() * 3);
+    const keys = ["charm", "strength", "intelligence"];
+    const key = keys[roll];
+
+    if (attributes[key] < 10) {
+      attributes[key]++;
+      attributes.extraPts--;
+    }
   }
+  updateUI();
 }
 
 function done() {
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value.trim() || "Anonymous";
   const initialHP = 100;
   const initialMoney = 100;
 
+  // Save character attributes and stats to localStorage
   localStorage.setItem("characterName", name);
   localStorage.setItem("HP", initialHP);
   localStorage.setItem("money", initialMoney);
+  localStorage.setItem("charm", attributes.charm);
+  localStorage.setItem("strength", attributes.strength);
+  localStorage.setItem("intelligence", attributes.intelligence);
 
   alert(
-      `Character Created:\nName: ${name}\nCharm: ${attributes.charm}\nStrength: ${attributes.strength}\nIntelligence: ${attributes.intelligence}\nHP: ${initialHP}\nMoney: ${initialMoney}`
+    `Character Created:\nName: ${name}\nCharm: ${attributes.charm}\nStrength: ${attributes.strength}\nIntelligence: ${attributes.intelligence}\nHP: ${initialHP}\nMoney: ${initialMoney}`
   );
 
+  // Redirect to the map page
   window.location.href = "map.html";
 }
 
@@ -58,4 +70,5 @@ function updateUI() {
   document.getElementById("extraPts").textContent = attributes.extraPts;
 }
 
+// Initialize the UI with default attribute values
 updateUI();

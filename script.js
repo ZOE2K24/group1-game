@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const money = localStorage.getItem("money");
 
     const statsContainer = document.getElementById("character-stats");
+    const continueButton = document.getElementById("continue-button");
 
     if (name && hp && money) {
         statsContainer.innerHTML = `
@@ -11,17 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
             HP: ${hp} <br>
             Money: $${money}
         `;
+        continueButton.style.display = "block"; // Show Continue Game button
     } else {
         statsContainer.innerHTML = `<p>No character data found. Start a new game!</p>`;
+        continueButton.style.display = "none"; // Hide Continue Game button
     }
 });
-
 
 function resetCharacter() {
     const confirmation = confirm("Are you sure you want to reset your character? This will erase all progress.");
     if (confirmation) {
-        localStorage.clear(); 
+        localStorage.clear();
         alert("Character has been reset!");
-        window.location.href = "newplayer.html"; 
+        window.location.href = "newplayer.html"; // Redirect to character creation page
     }
 }

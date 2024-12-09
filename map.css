@@ -82,24 +82,23 @@ body {
     width: 60px;
 }
 
-
 /* Character Styles */
 #character {
     position: absolute;
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    background-color: red; /* Red color for the circle */
-    border-radius: 50%; /* Makes it a perfect circle */
-    z-index: 10; /* Ensure it stays above other elements */
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10;
 }
 
-.download-logs {
+/* Buttons for Stats, Logs, and Leave Game */
+.download-logs,
+.leave-game,
+.view-stats-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
     padding: 10px 20px;
-    background-color: #0056b3;
-    color: white;
     font-size: 14px;
     border: none;
     border-radius: 5px;
@@ -109,8 +108,52 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Download Logs Button */
+.download-logs {
+    right: 20px; /* Right-most button */
+    background-color: #0056b3;
+    color: white;
+}
+
 .download-logs:hover {
     background-color: #003d80;
 }
 
+/* Leave Game Button */
+.leave-game {
+    left: 20px; /* On the left side of the screen */
+    background-color: #ff4d4d;
+    color: white;
+}
 
+.leave-game:hover {
+    background-color: #cc0000;
+}
+
+/* View Stats Button */
+.view-stats-button {
+    right: 100px; /* Positioned to the left of the Download Logs button */
+    background-color: #0056b3;
+    color: white;
+}
+
+.view-stats-button:hover {
+    background-color: #003d80;
+}
+
+/* Stats Popup */
+#stats-popup {
+    position: fixed;
+    bottom: 80px; /* Slightly above the buttons */
+    right: 20px; /* Aligned with the Download Logs button */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 200; /* Above all other elements */
+    font-size: 14px;
+    text-align: left;
+    width: 250px; /* Fixed width for neatness */
+    line-height: 1.5; /* Spacing for readability */
+}
