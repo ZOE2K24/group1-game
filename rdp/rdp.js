@@ -109,7 +109,6 @@ document.getElementById("leave").addEventListener("click", () => {
     // Save the current stats (including actions) before leaving
     saveStats(stats);
 
-    // Redirect to map.html
     window.location.href = "../map.html";
 });
 

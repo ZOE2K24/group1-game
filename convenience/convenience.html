@@ -10,11 +10,9 @@
     <button onclick="leaveBuilding()">Leave</button>
     <script>
     function leaveBuilding() {
-        // Move character to a safe position (e.g., away from the building)
-        localStorage.setItem("characterX", 750); // Safe X position
-        localStorage.setItem("characterY", 100); // Safe Y position
+        localStorage.setItem("characterX", 750);
+        localStorage.setItem("characterY", 100); 
 
-        // Redirect back to the map
         window.location.href = "../map.html";
     }
 </script>

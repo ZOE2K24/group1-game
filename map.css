@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -46,8 +45,8 @@ body {
 #game-container {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 50px); /* Adjust height to leave space for the stats bar */
-    margin-top: 50px; /* Push map below stats bar */
+    height: calc(100vh - 50px);
+    margin-top: 50px; 
     background: #cce7ff;
     overflow: hidden;
 }
@@ -110,7 +109,7 @@ body {
 
 /* Download Logs Button */
 .download-logs {
-    right: 20px; /* Right-most button */
+    right: 20px; 
     background-color: #0056b3;
     color: white;
 }
@@ -121,7 +120,7 @@ body {
 
 /* Leave Game Button */
 .leave-game {
-    left: 20px; /* On the left side of the screen */
+    left: 20px; 
     background-color: #ff4d4d;
     color: white;
 }
@@ -132,7 +131,7 @@ body {
 
 /* View Stats Button */
 .view-stats-button {
-    right: 100px; /* Positioned to the left of the Download Logs button */
+    right: 100px; 
     background-color: #0056b3;
     color: white;
 }
@@ -144,16 +143,16 @@ body {
 /* Stats Popup */
 #stats-popup {
     position: fixed;
-    bottom: 80px; /* Slightly above the buttons */
-    right: 20px; /* Aligned with the Download Logs button */
+    bottom: 80px; 
+    right: 20px; 
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.85); 
     color: white;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    z-index: 200; /* Above all other elements */
+    z-index: 200; 
     font-size: 14px;
     text-align: left;
-    width: 250px; /* Fixed width for neatness */
-    line-height: 1.5; /* Spacing for readability */
+    width: 250px; 
+    line-height: 1.5; 
 }

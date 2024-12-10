@@ -62,14 +62,14 @@ rollButton.addEventListener("click", () => {
     // Display dice results
     diceResults.forEach((color, index) => {
         diceElements[index].style.background = color;
-        diceElements[index].textContent = ""; // Clear dice text
+        diceElements[index].textContent = ""; 
     });
 
     // Check if player wins
     const wins = diceResults.filter((color) => color === selectedColor).length;
 
     if (wins > 0) {
-        const winnings = wins * 20; // $20 per matching dice
+        const winnings = wins * 20; 
         stats.money += winnings;
         gameResult.textContent = `You won $${winnings}!`;
     } else {
@@ -81,7 +81,7 @@ rollButton.addEventListener("click", () => {
     updateStatBar(stats);
 });
 
-// Handle leave button
+// leave button
 leaveButton.addEventListener("click", () => {
     window.location.href = "../casino/casino.html";
 });

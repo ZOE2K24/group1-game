@@ -2,7 +2,7 @@ let attributes = {
   charm: 0,
   strength: 0,
   intelligence: 0,
-  extraPts: 10, // Default pool of points for user allocation
+  extraPts: 10, 
 };
 
 function increase(attribute) {
@@ -22,13 +22,12 @@ function decrease(attribute) {
 }
 
 function rollAgain() {
-  // Reset all attributes and extra points
   attributes.charm = 0;
   attributes.strength = 0;
   attributes.intelligence = 0;
   attributes.extraPts = 10;
 
-  // Randomly distribute all points
+  // to distribute all points randomly
   while (attributes.extraPts > 0) {
     const roll = Math.floor(Math.random() * 3);
     const keys = ["charm", "strength", "intelligence"];
@@ -59,7 +58,6 @@ function done() {
     `Character Created:\nName: ${name}\nCharm: ${attributes.charm}\nStrength: ${attributes.strength}\nIntelligence: ${attributes.intelligence}\nHP: ${initialHP}\nMoney: ${initialMoney}`
   );
 
-  // Redirect to the map page
   window.location.href = "map.html";
 }
 
@@ -70,5 +68,5 @@ function updateUI() {
   document.getElementById("extraPts").textContent = attributes.extraPts;
 }
 
-// Initialize the UI with default attribute values
+
 updateUI();

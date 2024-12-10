@@ -16,7 +16,7 @@ function saveStats(stats) {
     localStorage.setItem("day", stats.day);
 }
 
-// Update the stat-bar dynamically
+// Update the stat-bar from every page
 function updateStatBar(stats) {
     const hpProgress = document.querySelector(".hp-progress");
     if (hpProgress) {

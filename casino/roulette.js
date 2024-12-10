@@ -3,7 +3,7 @@ const spinButton = document.getElementById("spin");
 const leaveButton = document.getElementById("leave");
 const betButtons = document.querySelectorAll(".bet-button");
 const numberBetInput = document.getElementById("number-bet");
-const betAmountInput = document.getElementById("bet-amount"); // New bet amount input
+const betAmountInput = document.getElementById("bet-amount"); 
 const moneyElement = document.getElementById("money");
 const rouletteResult = document.getElementById("roulette-result");
 
@@ -44,7 +44,7 @@ spinButton.addEventListener("click", () => {
         return;
     }
 
-    const betAmount = parseInt(betAmountInput.value); // Get the bet amount
+    const betAmount = parseInt(betAmountInput.value); 
     if (isNaN(betAmount) || betAmount <= 0) {
         alert("Please enter a valid bet amount.");
         return;

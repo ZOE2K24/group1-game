@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
             HP: ${hp} <br>
             Money: $${money}
         `;
-        continueButton.style.display = "block"; // Show Continue Game button
+        continueButton.style.display = "block"; 
     } else {
         statsContainer.innerHTML = `<p>No character data found. Start a new game!</p>`;
-        continueButton.style.display = "none"; // Hide Continue Game button
+        continueButton.style.display = "none"; 
     }
 });
 
@@ -24,6 +24,6 @@ function resetCharacter() {
     if (confirmation) {
         localStorage.clear();
         alert("Character has been reset!");
-        window.location.href = "newplayer.html"; // Redirect to character creation page
+        window.location.href = "newplayer.html"; 
     }
 }

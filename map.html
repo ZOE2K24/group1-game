@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="map.css">
 </head>
 <body>
-    <!-- Stats Bar -->
+    
     <div id="stats-bar">
         <div id="hp-bar">
             <span>HP:</span>
@@ -21,12 +21,9 @@
         <button id="view-stats" class="view-stats-button">View Stats</button>
     </div>
 
-    <!-- Game Container -->
+    
     <div id="game-container">
-        <!-- Character -->
         <div id="character"></div>
-        
-        <!-- Buildings -->
         <div class="building" id="bank" data-link="bank/bank.html" style="top: 50px; left: 100px;">Bank</div>
         <div class="building" id="casino" data-link="casino/casino.html" style="top: 50px; left: 400px;">Casino</div>
         <div class="building" id="home" data-link="charhome/home.html" style="top: 300px; left: 100px;">Home</div>
@@ -36,18 +33,18 @@
         <div class="building" id="redco" data-link="redco/redco.html" style="top: 500px; left: 100px;">RedCo</div>
         <div class="building" id="bar" data-link="bar/bar.html" style="top: 500px; left: 400px;">Red Bar</div>
 
-        <!-- Roads -->
+        
         <div class="road horizontal" style="top: 200px; left: 0; width: 100%;"></div>
         <div class="road vertical" style="top: 0; left: 300px; height: 100%;"></div>
     </div>
 
-    <!-- Download Logs Button -->
+    
     <button id="download-logs" class="download-logs">Download Logs</button>
     <button id="leave-game" class="leave-game">Leave Game</button>
 
-    <!-- Scripts -->
-    <script src="stat-bar.js"></script> <!-- Shared stat-bar functionality -->
-    <script src="map.js"></script> <!-- Map-specific functionality -->
+    
+    <script src="stat-bar.js"></script> 
+    <script src="map.js"></script> 
     <script src="log.js"></script>
 </body>
 </html>

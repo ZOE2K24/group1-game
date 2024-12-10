@@ -51,7 +51,7 @@ document.getElementById("drink-beer").addEventListener("click", () => {
     }
 
     stats.money -= 20;
-    stats.charm += 2; // Increase charm
+    stats.charm += 2; 
     saveStats(stats);
     updateStatBar(stats);
     alert("You feel charming! (+2 Charm)");
@@ -74,13 +74,11 @@ document.getElementById("buy-beer").addEventListener("click", () => {
 
 // Handle Bar Fight Button
 document.getElementById("bar-fight").addEventListener("click", () => {
-    // Redirect to bar-fight.html without deducting actions
     window.location.href = "bar-fight.html";
 });
 
 // Handle Leave Button
 document.getElementById("leave").addEventListener("click", () => {
-    // Move character back to a safe position on the map
     localStorage.setItem("characterX", 300);
     localStorage.setItem("characterY", 300);
     window.location.href = "../map.html";

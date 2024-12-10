@@ -2,7 +2,7 @@
 const symbols = ["🍒", "🍋", "🍊", "🍉", "🍇", "⭐"];
 
 // Adjusted weights for the symbols (higher weight = more likely to appear)
-const symbolWeights = [1.0, 0.2, 0.15, 0.1, 0.1, 0.05]; // Example odds: 🍒 is most likely
+const symbolWeights = [1.0, 0.2, 0.15, 0.1, 0.1, 0.05]; 
 
 // Elements
 const slot1 = document.getElementById("slot1");
@@ -23,7 +23,7 @@ function getRandomSymbol() {
             return symbols[i];
         }
     }
-    return symbols[symbols.length - 1]; // Fallback (shouldn't reach here)
+    return symbols[symbols.length - 1]; 
 }
 
 // Load stats from localStorage
@@ -49,7 +49,7 @@ function updateStatBar(stats) {
 // Slots animation
 function spinSlot(slotElement) {
     return new Promise((resolve) => {
-        let iterations = 20; // Number of spins
+        let iterations = 20; 
         let interval = setInterval(() => {
             const randomSymbol = getRandomSymbol();
             slotElement.textContent = randomSymbol;
@@ -58,7 +58,7 @@ function spinSlot(slotElement) {
                 clearInterval(interval);
                 resolve(slotElement.textContent);
             }
-        }, 100); // Speed of spin
+        }, 100); 
     });
 }
 
@@ -85,7 +85,7 @@ spinButton.addEventListener("click", async () => {
     // Check for win
     if (result1 === result2 && result2 === result3) {
         alert("You won $50!");
-        stats.money += 50; // Add winnings
+        stats.money += 50; 
         saveStats(stats);
         updateStatBar(stats);
     } else {

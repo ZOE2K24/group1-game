@@ -35,6 +35,6 @@ document.getElementById("play-color-game").addEventListener("click", () => {
 
 // Leave button
 document.getElementById("leave").addEventListener("click", () => {
-    window.location.href = "../map.html"; // Redirect to the map
+    window.location.href = "../map.html"; 
 });
 

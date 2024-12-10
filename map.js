@@ -4,10 +4,10 @@ const gameContainer = document.getElementById("game-container");
 const buildings = document.querySelectorAll(".building");
 const notification = createNotificationElement();
 const keysPressed = {};
-let position = { x: 10, y: 10 }; // Default starting position
+let position = { x: 10, y: 10 }; 
 const speed = 3;
 
-// Utility: Create notification element
+// Utility - for notif
 function createNotificationElement() {
     const notif = document.createElement("div");
     notif.id = "notification";
@@ -27,7 +27,7 @@ function createNotificationElement() {
     return notif;
 }
 
-// Utility: Show notification
+// Utility - to show notif
 function showNotification(message) {
     notification.textContent = message;
     notification.style.display = "block";
@@ -227,15 +227,15 @@ document.addEventListener("DOMContentLoaded", () => {
 // Continuously Update Character Position
 setInterval(updateCharacterPosition, 16);
 
-// Leave Game Button Functionality
+// Leave Game Button 
 document.getElementById("leave-game").addEventListener("click", () => {
     const confirmLeave = confirm("Are you sure you want to leave the game?");
     if (confirmLeave) {
-        window.location.href = "game.html"; // Redirect to homepage
+        window.location.href = "game.html"; 
     }
 });
 
-// Download Logs Functionality
+// Download Logs  - something missing
 document.getElementById("download-logs").addEventListener("click", () => {
     const blob = new Blob([logContent], { type: "text/plain" });
     const url = URL.createObjectURL(blob);

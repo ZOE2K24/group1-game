@@ -18,7 +18,7 @@ function saveStats(stats) {
     localStorage.setItem("day", stats.day);
 }
 
-// Update stat-bar dynamically
+// Update stat-bar 
 function updateStatBar(stats) {
     document.querySelector(".hp-progress").style.width = `${(stats.hp / 100) * 100}%`;
     document.getElementById("money").textContent = `Money: $${stats.money}`;
@@ -34,9 +34,9 @@ function updateBankStats(stats) {
 
 // Function to apply interest to the bank balance
 function applyInterest(stats) {
-    const interestRate = 0.031; // Example: 3.1% daily interest
-    stats.bank = Math.floor(stats.bank * (1 + interestRate)); // Add interest to the bank balance
-    saveStats(stats); // Save updated stats
+    const interestRate = 0.03; 
+    stats.bank = Math.floor(stats.bank * (1 + interestRate)); 
+    saveStats(stats); 
 }
 
 
@@ -46,9 +46,9 @@ document.getElementById("deposit").addEventListener("click", () => {
     if (amount > 0 && amount <= stats.money) {
         stats.money -= amount;
         stats.bank += amount;
-        saveStats(stats); // Save to localStorage
-        updateBankStats(stats); // Update bank-specific UI
-        updateStatBar(stats); // Update the stat-bar
+        saveStats(stats); 
+        updateBankStats(stats); 
+        updateStatBar(stats); 
         alert(`Deposited $${amount} to the bank.`);
     } else {
         alert("Invalid deposit amount.");
@@ -61,9 +61,9 @@ document.getElementById("withdraw").addEventListener("click", () => {
     if (amount > 0 && amount <= stats.bank) {
         stats.money += amount;
         stats.bank -= amount;
-        saveStats(stats); // Save to localStorage
-        updateBankStats(stats); // Update bank-specific UI
-        updateStatBar(stats); // Update the stat-bar
+        saveStats(stats); 
+        updateBankStats(stats); 
+        updateStatBar(stats); 
         alert(`Withdrew $${amount} from the bank.`);
     } else {
         alert("Invalid withdrawal amount.");
@@ -79,8 +79,7 @@ function updateBankStats(stats) {
 
 // Handle leave button
 document.getElementById("leave").addEventListener("click", () => {
-    // Move the character to a safe position (e.g., outside the building)
-    const safePosition = { x: 50, y: 50 }; // Adjust these values as needed
+    const safePosition = { x: 50, y: 50 }; 
     localStorage.setItem("characterX", safePosition.x);
     localStorage.setItem("characterY", safePosition.y);
 
